@@ -2,6 +2,7 @@ import Combine
 import ComposableArchitecture
 import XCTest
 
+@available(iOS 13, *)
 final class TimerTests: XCTestCase {
   var cancellables: Set<AnyCancellable> = []
 

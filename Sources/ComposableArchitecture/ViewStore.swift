@@ -42,6 +42,7 @@ import SwiftUI
 ///     }
 ///
 @dynamicMemberLookup
+@available(iOS 13, *)
 public final class ViewStore<State, Action>: ObservableObject {
   /// A publisher of state.
   public let publisher: StorePublisher<State>
@@ -216,6 +217,7 @@ public final class ViewStore<State, Action>: ObservableObject {
   }
 }
 
+@available(iOS 13, *)
 extension ViewStore where State: Equatable {
   public convenience init(_ store: Store<State, Action>) {
     self.init(store, removeDuplicates: ==)

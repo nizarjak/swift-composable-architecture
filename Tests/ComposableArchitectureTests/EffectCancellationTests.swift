@@ -3,6 +3,7 @@ import XCTest
 
 @testable import ComposableArchitecture
 
+@available(iOS 13, *)
 final class EffectCancellationTests: XCTestCase {
   struct CancelToken: Hashable {}
   var cancellables: Set<AnyCancellable> = []

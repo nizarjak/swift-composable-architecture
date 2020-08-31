@@ -6,6 +6,7 @@ import Foundation
 ///
 /// You will typically construct a single one of these at the root of your application, and then use
 /// the `scope` method to derive more focused stores that can be passed to subviews.
+@available(iOS 13, *)
 public final class Store<State, Action> {
   var state: CurrentValueSubject<State, Never>
   var effectCancellables: [UUID: AnyCancellable] = [:]
@@ -213,6 +214,7 @@ public final class Store<State, Action> {
 
 /// A publisher of store state.
 @dynamicMemberLookup
+@available(iOS 13, *)
 public struct StorePublisher<State>: Publisher {
   public typealias Output = State
   public typealias Failure = Never
