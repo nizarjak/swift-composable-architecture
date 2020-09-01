@@ -1,7 +1,7 @@
 #if canImport(CoreMotion)
   import ComposableArchitecture
 
-  @available(iOS 4.0, *)
+  @available(iOS 13, *)
   @available(macCatalyst 13.0, *)
   @available(macOS, unavailable)
   @available(tvOS, unavailable)

@@ -2,6 +2,7 @@
   import CoreLocation
   import ComposableArchitecture
 
+  @available(iOS 13, *)
   extension LocationManager {
     /// The mock implementation of the `LocationManager` interface. By default this implementation
     /// stubs all of its endpoints as functions that immediately `fatalError`. So, to construct a

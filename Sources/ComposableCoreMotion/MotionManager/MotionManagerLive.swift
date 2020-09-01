@@ -3,7 +3,7 @@
   import ComposableArchitecture
   import CoreMotion
 
-  @available(iOS 4, *)
+  @available(iOS 13, *)
   @available(macCatalyst 13, *)
   @available(macOS, unavailable)
   @available(tvOS, unavailable)
@@ -243,12 +243,16 @@
     }
   }
 
+  @available(iOS 13, *)
   private var accelerometerUpdatesSubscribers:
     [AnyHashable: Effect<AccelerometerData, Error>.Subscriber] = [:]
+  @available(iOS 13, *)
   private var deviceMotionUpdatesSubscribers:
     [AnyHashable: Effect<DeviceMotion, Error>.Subscriber] =
       [:]
+  @available(iOS 13, *)
   private var deviceGyroUpdatesSubscribers: [AnyHashable: Effect<GyroData, Error>.Subscriber] = [:]
+  @available(iOS 13, *)
   private var deviceMagnetometerUpdatesSubscribers:
     [AnyHashable: Effect<MagnetometerData, Error>.Subscriber] = [:]
 

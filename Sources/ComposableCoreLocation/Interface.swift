@@ -170,6 +170,7 @@ import CoreLocation
 /// control, and even what happens when the request for their location fails. It is very easy to
 /// write these tests, and we can test deep, subtle properties of our application.
 ///
+@available(iOS 13, *)
 public struct LocationManager {
 
   /// Actions that correspond to `CLLocationManagerDelegate` methods.
@@ -552,6 +553,7 @@ public struct LocationManager {
   }
 }
 
+@available(iOS 13, *)
 extension LocationManager {
   public struct Properties: Equatable {
     @available(macOS, unavailable)

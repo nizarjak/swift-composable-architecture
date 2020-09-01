@@ -163,7 +163,7 @@
   /// application logic. This can be incredibly powerful, and is typically not the kind of thing one
   /// can test easily.
   ///
-  @available(iOS 4.0, *)
+  @available(iOS 13, *)
   @available(macCatalyst 13.0, *)
   @available(macOS, unavailable)
   @available(tvOS, unavailable)

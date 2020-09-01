@@ -1,6 +1,7 @@
 import ComposableCoreLocation
 import XCTest
 
+@available(iOS 13, *)
 class ComposableCoreLocationTests: XCTestCase {
   func testMockHasDefaultsForAllEndpoints() {
     _ = LocationManager.mock()
