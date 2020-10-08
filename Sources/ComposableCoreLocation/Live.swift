@@ -107,6 +107,12 @@ extension LocationManager {
     }
 
     #if os(iOS) || targetEnvironment(macCatalyst)
+      manager.startMonitoringForRegion = { id, region in
+        .fireAndForget { dependencies[id]?.manager.startMonitoring(for: region.rawValue!) }
+      }
+    #endif
+
+    #if os(iOS) || targetEnvironment(macCatalyst)
       manager.startMonitoringVisits = { id in
         .fireAndForget { dependencies[id]?.manager.startMonitoringVisits() }
       }
@@ -115,6 +121,12 @@ extension LocationManager {
     #if os(iOS) || os(macOS) || os(watchOS) || targetEnvironment(macCatalyst)
       manager.startUpdatingLocation = { id in
         .fireAndForget { dependencies[id]?.manager.startUpdatingLocation() }
+      }
+    #endif
+
+    #if os(iOS) || targetEnvironment(macCatalyst)
+      manager.stopMonitoringForRegion = { id, region in
+        .fireAndForget { dependencies[id]?.manager.stopMonitoring(for: region.rawValue!) }
       }
     #endif
 
