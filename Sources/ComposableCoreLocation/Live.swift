@@ -114,6 +114,12 @@ extension LocationManager {
     #endif
 
     #if os(iOS) || targetEnvironment(macCatalyst)
+    manager.maximumRegionMonitoringDistance = { id -> CLLocationDistance in
+        dependencies[id]?.manager.maximumRegionMonitoringDistance ?? -1
+    }
+    #endif
+
+    #if os(iOS) || targetEnvironment(macCatalyst)
       manager.startMonitoringForRegion = { id, region in
         .fireAndForget { dependencies[id]?.manager.startMonitoring(for: region.rawValue!) }
       }
