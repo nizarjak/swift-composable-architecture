@@ -14,7 +14,11 @@ let package = Package(
     .library(
       name: "ComposableArchitecture",
       targets: ["ComposableArchitecture"]
-    )
+    ),
+    .library(
+      name: "ComposableArchitectureTestSupport",
+      targets: ["ComposableArchitectureTestSupport"]
+    ),
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/combine-schedulers", from: "0.1.0"),
@@ -33,7 +37,14 @@ let package = Package(
       dependencies: [
         "CombineSchedulers",
         "ComposableArchitecture",
+        "ComposableArchitectureTestSupport"
       ]
     ),
+    .target(
+      name: "ComposableArchitectureTestSupport",
+      dependencies: [
+        "ComposableArchitecture"
+      ]
+    )
   ]
 )

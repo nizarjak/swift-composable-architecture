@@ -1,6 +1,7 @@
 import Combine
 import CombineSchedulers
 import ComposableArchitecture
+import ComposableArchitectureTestSupport
 import XCTest
 
 final class ComposableArchitectureTests: XCTestCase {

@@ -1,6 +1,6 @@
 import Combine
 import XCTest
-
+import ComposableArchitectureTestSupport
 @testable import ComposableArchitecture
 
 final class StoreTests: XCTestCase {
