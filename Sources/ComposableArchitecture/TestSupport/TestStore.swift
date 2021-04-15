@@ -1,4 +1,3 @@
-#if DEBUG
   import Combine
   import Foundation
 
@@ -697,4 +696,3 @@
     _XCTest
     .flatMap { dlsym($0, "_XCTCurrentTestCase") }
     .map { unsafeBitCast($0, to: XCTCurrentTestCase.self) }
-#endif
